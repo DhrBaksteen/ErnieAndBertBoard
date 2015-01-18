@@ -3,7 +3,7 @@ The Ernie & Bert Board is my first try at generating a video signal using a PIC 
 
 Unlike Rickard's video game system this project displays a single hi-res monochrome image of 512x256 pixels on a PAL TV. Since the PIC is too slow and has too little memory to generate the image by itself the board holds a 16K EPROM chip that contains the bitmap image of Ernie & Bert and additional components to generate the video signal.
 
-![](https://raw.githubusercontent.com/DhrBaksteen/ErnieBertBoard/master/IMG_0859.JPG)
+![](https://raw.githubusercontent.com/DhrBaksteen/ErnieAndBertBoard/master/IMG_0859.JPG)
 
 ### How it works
 The board has two counters; the vertical line counter and the horizontal pixel counter. When video output is enabled the horizontal counter is clocked using the video clock. We have 52us of visible video signal on each scanline, or 520 clock pulses. Hence the choice for a horizontal resolution of 512 pixels. 
@@ -28,4 +28,4 @@ Optionally a 32K EPROM chip that contains two images can be inserted. Using a ju
 * The clock input to the counters should be negated. In the current hardware this is not the case and it causes visible glitches (the vertical lines) in the image when a new byte is loaded in the shift register.
 * The video signal seems to loose sync briefly every few seconds. Maybe due to an improper reset signal to the PIC?
 
-![](https://raw.githubusercontent.com/DhrBaksteen/ErnieBertBoard/master/IMG_0847.JPG)
+![](https://raw.githubusercontent.com/DhrBaksteen/ErnieAndBertBoard/master/IMG_0847.JPG)
