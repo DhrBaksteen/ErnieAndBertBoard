@@ -16,7 +16,7 @@ A shift register is used to convert the 8-bit parallel image data coming from th
 
 An additional debug video signal is generated directly by the PIC. This signal shows an alternating pattern of horizontal lines which was used to test the PIC during development.
 
-Optionally a 32K EPROM chip that contains two images can be inserted. Using a jumper on the board either the first or the second image can be selected.
+Optionally a 32K EPROM chip can be used in stead of a 16kb one. The 32kb ROM can contain two images. Using a jumper on the board either the first or the second image can be selected.
 
 ![](https://raw.githubusercontent.com/DhrBaksteen/ErnieAndBertBoard/master/Schematic.png)
 
