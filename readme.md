@@ -18,6 +18,8 @@ An additional debug video signal is generated directly by the PIC. This signal s
 
 Optionally a 32K EPROM chip that contains two images can be inserted. Using a jumper on the board either the first or the second image can be selected.
 
+![](https://raw.githubusercontent.com/DhrBaksteen/ErnieAndBertBoard/master/schematic.png)
+
 ### In this repository
 * ernie_bert.bin - Binary of the bitmap image without BMP headers to be loaded on the EPROM
 * ernie_bert.bmp - Editable bitmap
