@@ -31,4 +31,5 @@ Optionally a 32K EPROM chip that contains two images can be inserted. Using a ju
 * There are glitches in the form of vertical bars at regular intervals where the image seems to have shifted down a number of lines. This is probably an issue on the address bus due to sloppy soldering :)
 * The video signal seems to loose sync briefly every few seconds. Maybe due to an improper reset signal to the PIC?
 
-![](https://raw.githubusercontent.com/DhrBaksteen/ErnieAndBertBoard/master/IMG_0847.JPG)
+![](https://raw.githubusercontent.com/DhrBaksteen/ErnieAndBertBoard/master/IMG_0847.JPG)  |  ![](https://raw.githubusercontent.com/DhrBaksteen/ErnieAndBertBoard/master/IMG_0848.JPG)
+
