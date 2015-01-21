@@ -27,7 +27,7 @@ Optionally a 32K EPROM chip that contains two images can be inserted. Using a ju
 * video.hex - Binary loaded on the PIC
 
 ### Possible improvements
-* The clock input to the shift register should be negated. In the current hardware this is not the case and it causes visible glitches in the image when a new byte is latched into the shift register.
+* The VCLK clock input to the shift register and horizontal counter should be negated. In the current hardware this is not the case and it causes visible glitches in the image when a new byte is latched into the shift register.
 * There are glitches in the form of vertical bars at regular intervals where the image seems to have shifted down a number of lines. This is probably an issue on the address bus due to sloppy soldering :)
 * The video signal seems to loose sync briefly every few seconds. Maybe due to an improper reset signal to the PIC?
 
