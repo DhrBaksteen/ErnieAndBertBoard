@@ -27,9 +27,19 @@ Optionally a 32K EPROM chip can be used in stead of a 16kb one. The 32kb ROM can
 * video.hex - Binary loaded on the PIC
 
 ### Possible improvements
-* The VCLK clock input to the shift register and horizontal counter should be negated. In the current hardware this is not the case and it causes visible glitches in the image when a new byte is latched into the shift register.
-* There are glitches in the form of vertical bars at regular intervals where the image seems to have shifted down a number of lines. This is probably an issue on the address bus due to sloppy soldering :)
+* ~~The VCLK clock input to the shift register and horizontal counter should be negated. In the current hardware this is not the case and it causes visible glitches in the image when a new byte is latched into the shift register.~~
+* ~~There are glitches in the form of vertical bars at regular intervals where the image seems to have shifted down a number of lines. This is probably an issue on the address bus due to sloppy soldering :)~~
 * The video signal seems to loose sync briefly every few seconds. Maybe due to an improper reset signal to the PIC?
+
+The glitches in the picture seem to have been caused by noisy signals coming from the horizontal counter's Q0 .. Q2 outputs. This caused the 74165 to latch new bitmap data at 'random' times. A couple of 0.1nF capacitors between Vcc and the OR-gate inputs fixed the issue giving a perfectly stable picture.
+
+Before adding caps      |  After adding caps
+:----------------------:|:-------------------------:
+![](https://raw.githubusercontent.com/DhrBaksteen/ErnieAndBertBoard/master/IMG_1224.jpg)  |  ![](https://raw.githubusercontent.com/DhrBaksteen/ErnieAndBertBoard/master/IMG_1225.jpg)
+
+
+![](https://raw.githubusercontent.com/DhrBaksteen/ErnieAndBertBoard/master/IMG_1226.jpg)
+
 
 Board front             |  Board back
 :----------------------:|:-------------------------:
